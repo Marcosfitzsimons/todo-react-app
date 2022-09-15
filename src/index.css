@@ -19,6 +19,7 @@
     --neutral: #e4e5f1;
     --base100: #e5e0df;
   }
+
   body {
     font-size: 18px;
     line-height: 1.5;
@@ -46,6 +47,7 @@
       background-image: url("./assets/bg-desktop-dark.jpg");
     }
   }
+
   .switch-container {
     background-image: url("./assets/icon-moon.svg");
     background-position: center center;
