@@ -9,7 +9,7 @@ function App() {
     {
       id: 1,
       content: 'Complete online Javascript course',
-      isCheck: true,
+      isCheck: false,
     },
     {
       id: 2,
@@ -42,6 +42,11 @@ function App() {
   const [isMoon, setIsMoon] = useState(true);
   const [bgImg, setBgImg] = useState(true);
 
+  const itemsChecked = data.filter(todoItem => {
+    return todoItem.isCheck === true;
+  });
+
+  const todoActives = data.filter((todoItem) => todoItem.isCheck === false);
 
   const handleIsCheck = (id) => {
     setData((prevValue) => {
@@ -64,7 +69,10 @@ function App() {
     <div className="h-screen bg-primary">
       <Header isMoon={isMoon} bgImg={bgImg} handleBgImg={handleBgImg} handleMoon={handleMoon} />
 
-      <MainContent todoData={data} handleIsCheck={handleIsCheck} />
+      <MainContent
+        todoData={data}
+        handleIsCheck={handleIsCheck}
+        todoActives={todoActives} />
 
       <Footer />
     </div>
