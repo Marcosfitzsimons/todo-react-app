@@ -42,11 +42,20 @@ function App() {
   const [isMoon, setIsMoon] = useState(true);
   const [bgImg, setBgImg] = useState(true);
 
-  const itemsChecked = data.filter(todoItem => {
-    return todoItem.isCheck === true;
-  });
+  const showItemsChecked = () => {
+    data.filter(todoItem => {
+      return todoItem.isCheck;
+    })
+  };
 
-  const todoActives = data.filter((todoItem) => todoItem.isCheck === false);
+  const itemsActives = data.filter((todoItem) => todoItem.isCheck === false);
+
+  const clearCompleted = () => {
+    setData(prevValue => {
+      return prevValue.filter((todoItem) => todoItem.isCheck === false);
+    })
+  }
+
 
   const handleIsCheck = (id) => {
     setData((prevValue) => {
@@ -71,8 +80,10 @@ function App() {
 
       <MainContent
         todoData={data}
+        clearCompleted={clearCompleted}
         handleIsCheck={handleIsCheck}
-        todoActives={todoActives} />
+        showItemsChecked={showItemsChecked}
+        itemsActives={itemsActives} />
 
       <Footer />
     </div>

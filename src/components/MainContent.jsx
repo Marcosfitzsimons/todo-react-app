@@ -3,7 +3,13 @@ import TodoItem from "./TodoItem";
 import NewTodo from "./NewTodo";
 import TodoNav from "./TodoNav";
 
-const MainContent = ({ todoData, handleIsCheck, todoActives }) => {
+const MainContent = ({
+  todoData,
+  handleIsCheck,
+  clearCompleted,
+  itemsActives,
+  showItemsActives,
+}) => {
   return (
     <main className="relative bottom-24 container mx-auto max-w-4xl px-3">
       <section className="h-14 bg-secondary flex justify-between px-3 items-center rounded-xl text-neutral">
@@ -27,8 +33,11 @@ const MainContent = ({ todoData, handleIsCheck, todoActives }) => {
 
       <div className="todo-list-bottom lg:grid lg:grid-cols-3 lg:grid-row-[3rem]">
         <div className="lg:col-start-1 lg:col-end-4 text-neutral rounded-b-lg h-14 bg-secondary flex px-3 justify-between text-sm items-center">
-          <p className="items-left">{todoActives.length} items left</p>
-          <p className="clear cursor-pointer hover:text-accent">
+          <p className="items-left">{itemsActives.length} items left</p>
+          <p
+            className="clear cursor-pointer hover:text-accent"
+            onClick={clearCompleted}
+          >
             Clear Completed
           </p>
         </div>
