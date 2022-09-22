@@ -90,7 +90,7 @@ const MainContent = () => {
               );
             })
           ) : (
-            <p className="flex flex-col items-center justify-center gap-6 text-xl lg:text-3xl my-10 pt-8 text-neutral text-center h-[15rem] lg:h-[25rem]">
+            <p className="flex flex-col items-center justify-center gap-6 text-xl lg:text-3xl my-16 pt-8 text-neutral text-center">
               <FaRegSadTear className="text-6xl lg:text-8xl" />
               You don't have anything to do...
             </p>
@@ -108,7 +108,7 @@ const MainContent = () => {
             Clear Completed
           </p>
         </div>
-        <TodoNav setStatus={setStatus} />
+        <TodoNav setStatus={setStatus} status={status} />
       </div>
     </main>
   );

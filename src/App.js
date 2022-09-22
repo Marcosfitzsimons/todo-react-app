@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <div className="app h-screen lg:h-full bg-primary">
+      <div className="app h-screen bg-primary">
         <Header isMoon={isMoon} bgImg={bgImg} handleBgImg={handleBgImg} handleMoon={handleMoon} />
 
         <MainContent />

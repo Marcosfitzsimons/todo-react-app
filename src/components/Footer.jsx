@@ -4,10 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer relative bottom-24 lg:bottom-36">
       <div className="container mx-auto max-w-4xl flex px-3 text-neutral flex-col items-center">
-        <p className="footer__text lg:text-base">
-          Drag and drop to reorder list
-        </p>
-        <div className="attribution-container text-center lg:text-base lg:mt-3">
+        <div className="attribution-container text-center lg:text-base mt-5">
           <p className="">
             Challenge by{" "}
             <a
