@@ -47,7 +47,7 @@ const NewTodo = ({ inputTodo, setInputTodo, todos, setTodos }) => {
         name="newtodo"
         type="text"
         placeholder="Create a new todo..."
-        className="h-full self-center pt-1 flex-grow border-none text-sm text-neutral bg-secondary outline-none placeholder:font-normal placeholder:text-neutral"
+        className="h-full self-center pt-1 flex-grow border-none text-sm lg:text-base text-neutral bg-secondary outline-none placeholder:font-normal placeholder:text-neutral"
       />
       <button
         type="submit"

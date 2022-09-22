@@ -9,7 +9,7 @@ function App() {
   const [bgImg, setBgImg] = useState(true);
 
   const handleMoon = () => {
-    setIsMoon((prevValue) => !prevValue)
+    setIsMoon(prevValue => !prevValue)
   }
 
   const handleBgImg = () => {
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <div className="app h-screen bg-primary">
+      <div className="app h-screen lg:h-full bg-primary">
         <Header isMoon={isMoon} bgImg={bgImg} handleBgImg={handleBgImg} handleMoon={handleMoon} />
 
         <MainContent />
@@ -30,6 +30,8 @@ function App() {
         toastOptions={{
           style: {
             fontSize: '1rem',
+            backgroundColor: isMoon ? '#ffffff' : '#25273c',
+            color: isMoon ? '#393a4c' : '#e4e5f1'
           },
         }} />
     </>

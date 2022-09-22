@@ -23,7 +23,7 @@ const TodoItem = ({ todoItem, setTodos, todos }) => {
   };
 
   return (
-    <li className="todo-item text-neutral first:rounded-t-lg h-14 bg-secondary flex px-3 border-b-2 border-b-primary justify-between items-center">
+    <li className="todo-item text-neutral first:rounded-t-lg h-14 bg-secondary flex px-3 border-b-2 border-b-primary justify-between items-center cursor-pointer">
       <div className="todo-wrapper flex gap-1 h-full flex-grow">
         <div className="check-container w-8 aspect-square flex">
           {todoItem.completed ? (
@@ -35,7 +35,7 @@ const TodoItem = ({ todoItem, setTodos, todos }) => {
             </div>
           ) : (
             <div
-              className="check-circle relative border border-neutral h-[44%] aspect-square rounded-full cursor-pointer self-center"
+              className="check-circle relative border border-neutral hover:border-neutral/60 h-[44%] aspect-square rounded-full cursor-pointer self-center"
               onClick={handleComplete}
             >
               <div className="absolute w-4 aspect-square"></div>
@@ -46,8 +46,8 @@ const TodoItem = ({ todoItem, setTodos, todos }) => {
           <p
             className={
               todoItem.completed
-                ? "line-through opacity-60 text-base pt-2 flex-grow flex items-center border-none"
-                : "text-base pt-2 flex-grow flex items-center border-none"
+                ? " text-sm lg:text-base line-through opacity-60 pt-2 flex-grow flex items-center border-none"
+                : " text-sm lg:text-base pt-2 flex-grow flex items-center border-none"
             }
           >
             {todoItem.text}

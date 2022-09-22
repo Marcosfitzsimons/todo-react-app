@@ -4,18 +4,23 @@ const Footer = () => {
   return (
     <footer className="footer relative bottom-24 lg:bottom-36">
       <div className="container mx-auto max-w-4xl flex px-3 text-neutral flex-col items-center">
-        <p className="footer__text">Drag and drop to reorder list</p>
-        <div className="attribution-container text-center">
-          <p className="attribution flex gap-1">
-            Challenge by
+        <p className="footer__text lg:text-base">
+          Drag and drop to reorder list
+        </p>
+        <div className="attribution-container text-center lg:text-base lg:mt-3">
+          <p className="">
+            Challenge by{" "}
             <a
               className="me"
               href="https://www.frontendmentor.io?ref=challenge"
               target="_blank"
               rel="noreferrer"
             >
+              {" "}
               Frontend Mentor.
             </a>
+          </p>
+          <p>
             Coded by
             <a
               href="https://github.com/Marcosfitzsimons"
@@ -23,6 +28,7 @@ const Footer = () => {
               rel="noreferrer"
               className="me text-accent/90 italic"
             >
+              {" "}
               Marcos Valentín Fitzsimons.
             </a>
           </p>
