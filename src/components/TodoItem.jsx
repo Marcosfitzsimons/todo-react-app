@@ -13,12 +13,11 @@ const TodoItem = ({ todoItem, setTodos, todos }) => {
       todos.map((item) => {
         if (item.id === todoItem.id) {
           return {
-            ...todoItem,
+            ...item,
             completed: !item.completed,
           };
-        } else {
-          return { ...todoItem };
         }
+        return item;
       })
     );
   };
@@ -47,13 +46,19 @@ const TodoItem = ({ todoItem, setTodos, todos }) => {
           <p
             className={
               todoItem.completed
-                ? "line-through text-base pt-2 flex-grow flex items-center border-none"
+                ? "line-through opacity-60 text-base pt-2 flex-grow flex items-center border-none"
                 : "text-base pt-2 flex-grow flex items-center border-none"
             }
           >
             {todoItem.text}
           </p>
-          <p className="text-xs flex items-center pb-1">
+          <p
+            className={
+              todoItem.completed
+                ? "text-xs opacity-60 flex items-center pb-1"
+                : "text-xs flex items-center pb-1"
+            }
+          >
             {format(new Date(todoItem.time), "p, MM/dd/yyyy")}
           </p>
         </div>

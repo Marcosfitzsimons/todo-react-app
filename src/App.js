@@ -16,22 +16,6 @@ function App() {
     setBgImg(prevValue => !prevValue);
   }
 
-  /* const showCompletedItems = () => {
-     data.filter(todoItem => {
-       return todoItem.isCheck;
-     })
-   };
- 
-   const activeItems = data.filter((todoItem) => todoItem.isCheck === false);
- 
-   const clearCompleted = () => {
-     setData(prevValue => {
-       return prevValue.filter((todoItem) => todoItem.isCheck === false);
-     })
-   }
- */
-
-
   return (
     <>
       <div className="app h-screen bg-primary">
