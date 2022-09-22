@@ -16,7 +16,6 @@ const NewTodo = ({ inputTodo, setInputTodo, todos, setTodos }) => {
             id: uuidv4(),
             text: inputTodo,
             completed: false,
-            time: new Date().toLocaleString(),
           },
         ]);
         setInputTodo("");

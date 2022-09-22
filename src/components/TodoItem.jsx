@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { format } from "date-fns/esm";
 import toast from "react-hot-toast";
 
 const TodoItem = ({ todoItem, setTodos, todos }) => {
@@ -51,15 +50,6 @@ const TodoItem = ({ todoItem, setTodos, todos }) => {
             }
           >
             {todoItem.text}
-          </p>
-          <p
-            className={
-              todoItem.completed
-                ? "text-xs opacity-60 flex items-center pb-1"
-                : "text-xs flex items-center pb-1"
-            }
-          >
-            {format(new Date(todoItem.time), "p, MM/dd/yyyy")}
           </p>
         </div>
       </div>
