@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="footer relative bottom-24 lg:bottom-36">
-      <div className="container mx-auto max-w-4xl flex px-3 text-neutral flex-col items-center">
+      <div className="container mx-auto max-w-3xl flex px-3 text-neutral flex-col items-center">
         <div className="attribution-container text-center lg:text-base mt-5">
           <p className="">
             Challenge by{" "}

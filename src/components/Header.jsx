@@ -10,7 +10,7 @@ const Header = ({ isMoon, handleMoon, bgImg, handleBgImg }) => {
 
   return (
     <header className={bgImg ? "header h-56" : "header h-56 active"}>
-      <div className="container max-w-4xl mx-auto p-3 h-28 flex justify-between items-center">
+      <div className="container max-w-3xl mx-auto p-3 h-28 flex justify-between items-center">
         <h1 className="tracking-widest text-4xl text-white/95 cursor-pointer font-bold relative top-[.1rem]">
           TODO
         </h1>

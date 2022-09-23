@@ -66,7 +66,7 @@ const MainContent = () => {
   }, [parentRef]);
 
   return (
-    <main className="relative bottom-24 container mx-auto max-w-4xl px-3">
+    <main className="relative bottom-24 container mx-auto max-w-3xl px-3">
       <section className="h-14 bg-secondary flex justify-between px-3 items-center rounded-xl text-neutral">
         <NewTodo
           setInputTodo={setInputTodo}
