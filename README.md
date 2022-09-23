@@ -94,11 +94,11 @@ const getLocalTodos = () => {
 };
 ```
 
-How to add transitions easily to my app with: [Auto animate](https://auto-animate.formkit.com/)
+-How to add transitions easily to my app with: [Auto animate](https://auto-animate.formkit.com/)
 
-How to generate a random ID with: [UUID](https://github.com/uuidjs/uuid)
+-How to generate a random ID with: [UUID](https://github.com/uuidjs/uuid)
 
-How to create notifications with: [React hot toast](https://react-hot-toast.com/)
+-How to create notifications with: [React hot toast](https://react-hot-toast.com/)
 
 ## Author
 
