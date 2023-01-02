@@ -5,7 +5,6 @@ import NewTodo from "./NewTodo";
 import TodoNav from "./TodoNav";
 import autoAnimate from "@formkit/auto-animate";
 import { useEffect, useRef } from "react";
-import { FaRegSadTear } from "react-icons/fa";
 
 const MainContent = () => {
   // States
@@ -90,9 +89,8 @@ const MainContent = () => {
               );
             })
           ) : (
-            <p className="flex flex-col items-center justify-center gap-6 text-xl lg:text-3xl my-16 pt-8 text-neutral text-center">
-              <FaRegSadTear className="text-6xl lg:text-8xl" />
-              Your to do list is currently empty. Time to relax!
+            <p className="flex flex-col items-center justify-center text-xl lg:text-3xl my-16 pt-8 text-neutral text-center">
+              Your to do list is currently empty. <span>Time to relax!</span>
             </p>
           )}
         </ul>
